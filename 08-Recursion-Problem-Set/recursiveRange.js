@@ -1,4 +1,4 @@
-"uses strict";
+"use strict";
 
 function recursiveRange(num) {
   // base case

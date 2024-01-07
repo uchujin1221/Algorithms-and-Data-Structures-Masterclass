@@ -1,4 +1,4 @@
-"uses struct";
+"use struct";
 
 function productOfArray(arr1) {
   let num = 0;
