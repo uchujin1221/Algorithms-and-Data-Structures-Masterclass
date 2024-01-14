@@ -2,6 +2,7 @@
 
 // Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
 
+// Helper method recursion
 function flatten(arr) {
   // add whatever parameters you deem necessary - good luck!
   let newArr = [];

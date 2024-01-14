@@ -1,23 +1,42 @@
 "use strict";
 
 // Write a recursive function called nestedEvenSum. Return the sum of all even numbers in an object which may contain nested objects.
+
+// Helper method recursion
+// function nestedEvenSum(inputObj) {
+//   let result = 0;
+
+//   function helper(helperinput) {
+//     // add whatever parameters you deem necessary - good luck!
+//     for (const property in helperinput) {
+//       if (typeof helperinput[property] === "object") {
+//         helper(helperinput[property]);
+//       }
+
+//       if (helperinput[property] % 2 === 0) {
+//         result += helperinput[property];
+//       }
+//     }
+//   }
+//   helper(inputObj);
+
+//   return result;
+// }
+
+// Pure resursion
 function nestedEvenSum(inputObj) {
   let result = 0;
 
-  function helper(helperinput) {
-    // add whatever parameters you deem necessary - good luck!
-    for (const property in helperinput) {
-      if (typeof helperinput[property] === "object") {
-        helper(helperinput[property]);
-      }
+  // add whatever parameters you deem necessary - good luck!
+  for (const property in inputObj) {
+    if (typeof inputObj[property] === "object") {
+      result += nestedEvenSum(inputObj[property]);
+    }
 
-      if (helperinput[property] % 2 === 0) {
-        result += helperinput[property];
-      }
+    if (inputObj[property] % 2 === 0) {
+      result += inputObj[property];
     }
   }
-  helper(inputObj);
-
   return result;
 }
 
