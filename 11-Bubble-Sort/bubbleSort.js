@@ -1,8 +1,15 @@
 "use strict";
 
-// Bubble swap keeps on comparing and swapping until largest value goes to the end in each round
+// Bubble sort keeps on comparing and swapping until largest value goes to the end "in each round"
 
 // Time complexity in general is O(n^2), best case is O(n) when input data is nearly sorted
+// Space complexity is O(1) as no new array is created
+
+// Pesudocode
+// 1 - Start looping from a variable called i the end of the array towards the beginning
+// 2 - Start an inner loop with a variable called j from the beginning until i - 1
+// 3 - if arr[j] > arr[j+1], swap these 2 values
+// 4 - return the sorted array
 
 function bubbleSort(arr, comparator) {
   console.log(arr);

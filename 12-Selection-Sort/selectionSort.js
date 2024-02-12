@@ -4,7 +4,15 @@
 
 // Benefit over bubble sort : less swaps in selection sort
 
-// Time complexity is O(n^2)
+// Time complexity in general is O(n^2), best case is O(n)
+// Space complexity is O(1) as no new array is created
+
+// Pseudocode
+// 1 - Store the 1st element as the smallest value you have seen so far
+// 2 - Compare this item to the next item in the array until you find a smaller number
+// 3 - If a smaller number is found, desginated that smaller number to be the new "minimum", and continue untilthe end of the array
+// 4 - If the "minimum" is not the value (index) you initially began with, swap the 2 values
+// 5 - Repeat this with the next element until the array is sorted
 
 function selectionSort(arr, comparator) {
   console.log(arr);

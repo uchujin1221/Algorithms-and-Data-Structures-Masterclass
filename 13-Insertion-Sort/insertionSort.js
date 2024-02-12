@@ -4,7 +4,15 @@
 
 // Good when nearly sorted or new elements adding over time (online sort)
 
-// Time complexity is O(n^2)
+// Time complexity is O(n^2) no matter what !
+// Space complexity is O(1) as no new array is created
+
+// Pseudocode
+// 1 - Start by picking the 2nd element in the array
+// 2 - Now compare the second element with the one before it and swap if necessary (i.e. if target element is smaller than previous element)
+// 3 - Continue to the next element and if it is in the incorrect order, iterate through the sorted position (i.e. the left side)
+//     to place the element in the correct place (i.e. repeat step 2 until target element is bigger than previous element)
+// 4 - Repeat until the array is sorted
 
 function insertionSort(arr, comparator) {
   console.log(arr);
