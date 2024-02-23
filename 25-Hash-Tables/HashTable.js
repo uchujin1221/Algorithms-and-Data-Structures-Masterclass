@@ -48,7 +48,7 @@ class HashTable {
       : undefined;
   }
 
-  // Loop through the hash table and return an array of keys in the table
+  // Loop through the hash table and return an array of keys in the table (distinct)
   keys() {
     const retVal = new Set();
     this.keyMap.map((subarray) =>
@@ -57,7 +57,7 @@ class HashTable {
     return retVal;
   }
 
-  // Loop through the hash table and return an array of values in the table (distict values)
+  // Loop through the hash table and return an array of values in the table (distinct)
   values() {
     const retVal = new Set();
     this.keyMap.map((subarray) =>
